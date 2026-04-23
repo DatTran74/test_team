@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #f5f7fa;
+}
+
+/* Fix overlaps in the generated workflow UI.
+   Some blocks are given fixed heights (e.g. h-[15px]) but contain wrapping/multi-line text. */
+[data-name="workflows"] [data-name="frame sub"] {
+  height: auto !important;
+}
+
+[data-name="workflows"] [data-name="frame sub"] > * {
+  height: auto !important;
+}
+
+/* Responsive overrides for the generated workflow detail (FrameStage0101).
+   Goal: on narrow screens, keep content readable without horizontal scrolling. */
+@media (max-width: 768px) {
+  [data-name="workflows"] [data-name="milestone_component"] {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  [data-name="workflows"] [data-name="flow_milestone_comonent"] {
+    width: 100% !important;
+    text-align: left;
+    align-items: flex-start;
+    white-space: normal;
+    padding-top: 8px;
+  }
+
+  [data-name="workflows"] [data-name="timeline_point_component"] {
+    width: auto !important;
+    align-self: flex-start;
+  }
+}
