@@ -14,12 +14,12 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "test_tab${{APP_NAME_SUFFIX}}",
-        "full": "Full name for test_tab"
+        "short": "Quocviet Worrkflow${{APP_NAME_SUFFIX}}",
+        "full": "Quocviet Worrkflow"
     },
     "description": {
-        "short": "Short description of test_tab",
-        "full": "Full description of test_tab"
+        "short": "Workflow management for Quocviet",
+        "full": "Quocviet Worrkflow helps teams manage and track workflows efficiently."
     },
     "accentColor": "#FFFFFF",
     "supportsChannelFeatures": "tier1",
